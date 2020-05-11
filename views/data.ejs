@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>E-Album</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+  <link rel="stylesheet" href="body.css" />
+</head>
+
+<body>
+
+
+  <!-- Adding navbar here -->
+
+  <nav id="mainNavbar" class="navbar navbar-dark bg-light justify-content-between">
+    <a class="navbar-brand">E-Album</a>
+    <form class="form-inline" >
+
+      <a class="btn btn-dark" href="/logout" role="button">Logout</a>
+    </form>
+  </nav>
+  <br>
+  <br>
+
+
+  <!-- Navbbar ends here -->
+
+
+  <!-- Adding card here -->
+
+<form  action="/delete" method="post">
+        <section class="container-fluid">
+            <div class="row allign-items-center">
+      <div class="container">
+<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+
+  <%  for(var i=0; i<EJS.length; i++){  %>
+    <div class="col-md-6">
+      <div class="thumbnail">
+    <input type="checkbox"  name="checkbox"  value="<%=EJS[i]._id%>">
+    <p> <img src="./uploads/<%=EJS[i].imagename%>" alt="www" width="300"></p>
+        <div class="caption">
+          <p><%=EJS[i].comment%></p>
+          <button class="btn btn-danger" onchange="this.form.submit()" value="<%=EJS[i]._id%>" name="button">Delete</button>
+        </div>
+
+      </div>
+    </div>
+    <%  } %>
+
+</div>
+</div>
+</div>
+</section>
+</form>
+  <!-- Card ends here -->
+
+
+
+
+
+
+
+</body>
+
+
+</html>

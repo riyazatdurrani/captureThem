@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="body.css" />
+  </head>
+  <body>
+<!--
+    <form action="/data" method="POST" enctype="multipart/form-data">
+<input type="text" name="text1" class="form-control input_user" value="">
+<br> <br>
+<input type="file" name="image" class="form-control input_user" value="" accept="image/*">
+<br> <br>
+    <button type="submit" name="button" class="btn login_btn">SUBMIT</button>
+
+    </form> -->
+
+
+    <form class="md-form" action="/firstpage" method="POST" enctype="multipart/form-data" style="margin-top:250px;">
+
+      <div class="container" style="width:27%" >
+              <input type="text" name="text1" class="form-control input_user" value="" placeholder="Enter photo description" autocomplete="off">
+      </div>
+
+      <div class="file-field d-flex justify-content-center form_container d-flex justify-content-center h-100">
+        <div class="btn btn-primary btn-sm float-left">
+          <span>Upload here!</span>
+
+              
+
+          <input type="file" name="image" class="form-control input_user" value="" accept="image/*">
+        </div>
+        <div class="file-path-wrapper" >
+
+        </div>
+      </div>
+      <div style="margin-left: -255px;" class="file-field d-flex justify-content-center form_container d-flex justify-content-center">
+          <p> <button type="submit" name="button" class="btn login_btn">SUBMIT</button></p>
+      </div>
+
+    </form>
+
+
+  </body>
+</html>
